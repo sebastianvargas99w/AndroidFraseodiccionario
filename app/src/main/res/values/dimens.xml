@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margen_inferior_boton">21dp</dimen>
+    <dimen name="margen_izquierdo_boton">5dp</dimen>
+    <dimen name="margen_minimo_elementos">5dp</dimen>
+    <dimen name="tamano_minimo_elementos_interactivos">30dp</dimen>
+    <!-- Caso letra Activity and Fragments -->
+
+    <dimen name="tamano_letra_opciones">20sp</dimen>
+    <dimen name="tamano_max_numero">25sp</dimen>
+    <dimen name="dimen_img_mostrador_frases">250dp</dimen>
+    <dimen name="tamano_imagen_de_switch">60dp</dimen>
+    <dimen name="dimension_minima_checkbox">50dp</dimen>
+
+
+
+</resources>

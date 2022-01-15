@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/help1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:text="¿Cómo interactuar en la pantalla de frases?"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/tamano_max_numero"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <TextView
+                android:id="@+id/help1_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Arriba de la imagen, al lado derecho, se observan unos números. Esos números corresponden a la cantidad de pantallas de cada tema (número al lado derecho) y a la pantalla en la que se está actualmente(número al lado izquiedo)."
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/tamano_letra_opciones"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="start"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/botonReproducirAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="false"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="16dp"
+                    android:minWidth="@dimen/tamano_minimo_elementos_interactivos"
+                    android:minHeight="@dimen/tamano_minimo_elementos_interactivos"
+                    android:src="@drawable/icono_reproducir_audio"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/help2_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Al presionar este botón se escuchan los audios correspondientes a cada frase. También se pueden escuchar los audios al tocar una imagen."
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/tamano_letra_opciones"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="start"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/botonTraducir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="false"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="16dp"
+                    android:minWidth="@dimen/tamano_minimo_elementos_interactivos"
+                    android:minHeight="@dimen/tamano_minimo_elementos_interactivos"
+                    android:src="@drawable/icono_boton_traducir"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/help4_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Al presionar este botón se muestra la traducción de la frase en español. También se puede ver la traducción al mantener estripado una imagen."
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/tamano_letra_opciones"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageViewPanama"
+                    android:layout_width="@dimen/tamano_imagen_de_switch"
+                    android:layout_height="@dimen/tamano_imagen_de_switch"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:minWidth="@dimen/dimension_minima_checkbox"
+                    android:minHeight="@dimen/dimension_minima_checkbox"
+                    android:onClick="cambioVersion"
+                    android:src="@drawable/switchcr"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/help5_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text='Este botón que se desplaza de lado a lado permite cambiar el acento de la variedad de naso brorán de Costa Rica a la variedad naso de Panamá, aunque no siempre existen diferencias. También permite escoger entre la voz de una mujer o un hombre. '
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/tamano_letra_opciones"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>

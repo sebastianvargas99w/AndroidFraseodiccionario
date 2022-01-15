@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="10"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="bottom"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sistema.Fraseodiccionario.MostradorDeFrases"
+    tools:showIn="@layout/activity_mostrador_frases">
+
+    <LinearLayout
+        android:id="@+id/seccionSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/seccionInferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutNavegadorFrases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ingresoDePalabra"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:hint="@string/pista_ingreso_de_seccion"
+                android:inputType="numberDecimal"
+                android:paddingLeft="12dp"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/textoMaximoPalabra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:gravity="bottom"
+                android:text="@string/numero_de_seccion_por_defecto"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/tamano_max_numero"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageViewIlustracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/descripcion_img_frase"
+            android:maxWidth="@dimen/dimen_img_mostrador_frases"
+            android:maxHeight="@dimen/dimen_img_mostrador_frases"
+            android:src="@mipmap/ic_launcher" />
+        <!--
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray" />
+            -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seccionInferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAcciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/botonTraducir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:minWidth="@dimen/tamano_minimo_elementos_interactivos"
+                android:minHeight="@dimen/tamano_minimo_elementos_interactivos"
+                android:src="@drawable/icono_boton_traducir" />
+
+            <ImageButton
+                android:id="@+id/botonReproducirAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:adjustViewBounds="false"
+                android:background="@android:color/transparent"
+                android:minWidth="@dimen/tamano_minimo_elementos_interactivos"
+                android:minHeight="@dimen/tamano_minimo_elementos_interactivos"
+                android:src="@drawable/icono_reproducir_audio" />
+
+        </LinearLayout>
+
+        <!-- La actividad que maneja esta interfaz habilita el uso del tamaño
+    mínimo que tienen algunos elementos y elimina algunos márgenes cuando
+    la pantalla es pequeña -->
+        <LinearLayout
+            android:id="@+id/linearLayoutPais"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_CR"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margen_minimo_elementos"
+                android:layout_marginLeft="@dimen/margen_minimo_elementos"
+                android:layout_marginTop="@dimen/margen_minimo_elementos"
+                android:layout_marginEnd="@dimen/margen_minimo_elementos"
+                android:layout_marginRight="@dimen/margen_minimo_elementos"
+                android:text="@string/lugar_izquierda"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/tamano_letra_opciones"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewPanama"
+                android:layout_width="@dimen/tamano_imagen_de_switch"
+                android:layout_height="@dimen/tamano_imagen_de_switch"
+                android:layout_gravity="center"
+                android:minWidth="@dimen/dimension_minima_checkbox"
+                android:minHeight="@dimen/dimension_minima_checkbox"
+                android:onClick="cambioVersion"
+                android:src="@drawable/switchcr" />
+
+            <TextView
+                android:id="@+id/txt_Panama"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margen_minimo_elementos"
+                android:layout_marginLeft="@dimen/margen_minimo_elementos"
+                android:layout_marginTop="@dimen/margen_minimo_elementos"
+                android:layout_marginEnd="@dimen/margen_minimo_elementos"
+                android:layout_marginRight="@dimen/margen_minimo_elementos"
+                android:text="@string/lugar_derecha"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/tamano_letra_opciones"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutGenero"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:weightSum="30">
+
+            <TextView
+                android:id="@+id/txt_Mujer"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margen_minimo_elementos"
+                android:layout_marginLeft="@dimen/margen_minimo_elementos"
+                android:layout_marginTop="@dimen/margen_minimo_elementos"
+                android:layout_marginEnd="@dimen/margen_minimo_elementos"
+                android:layout_marginRight="@dimen/margen_minimo_elementos"
+                android:text="@string/genero_izquierda"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/tamano_letra_opciones"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewGenero"
+                android:layout_width="@dimen/tamano_imagen_de_switch"
+                android:layout_height="@dimen/tamano_imagen_de_switch"
+                android:layout_gravity="center"
+                android:minWidth="@dimen/dimension_minima_checkbox"
+                android:minHeight="@dimen/dimension_minima_checkbox"
+                android:onClick="cambioGenero"
+                android:src="@drawable/switchm" />
+
+            <TextView
+                android:id="@+id/txt_Hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margen_minimo_elementos"
+                android:layout_marginStart="@dimen/margen_minimo_elementos"
+                android:layout_marginLeft="@dimen/margen_minimo_elementos"
+                android:layout_marginEnd="@dimen/margen_minimo_elementos"
+                android:layout_marginRight="@dimen/margen_minimo_elementos"
+                android:text="@string/genero_derecha"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/tamano_letra_opciones"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBotones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_atras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:drawableStart="@drawable/icono_atras"
+                android:drawableLeft="@drawable/icono_atras"
+                android:minWidth="@dimen/tamano_minimo_elementos_interactivos"
+                android:minHeight="@dimen/tamano_minimo_elementos_interactivos"
+                android:paddingRight="10dp"
+                android:shadowColor="@color/colorPrimaryDark"
+                android:text="@string/opcion_atras"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextoBotones" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_siguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/colorPrimaryDark"
+                android:drawableEnd="@drawable/icono_siguiente"
+                android:drawableRight="@drawable/icono_siguiente"
+                android:minWidth="@dimen/tamano_minimo_elementos_interactivos"
+                android:minHeight="@dimen/tamano_minimo_elementos_interactivos"
+                android:paddingLeft="10dp"
+                android:shadowColor="@color/colorPrimaryDark"
+                android:text="@string/opcion_siguiente"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextoBotones" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
